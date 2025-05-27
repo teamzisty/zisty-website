@@ -143,10 +143,19 @@ body {
 }
 
 @keyframes gentleFloat {
-  0% { transform: translateY(0);  }
-  50% { transform: translateY(-7px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
+
 .gentleFloat {
   animation: gentleFloat 3s ease-in-out infinite;
 }
