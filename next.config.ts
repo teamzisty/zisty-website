@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  image: {
-    unnpimized: true,
+  images: {
+    unoptimized: true,
   },
 }
 
