@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Members() {
@@ -67,7 +68,7 @@ export default function Members() {
                         const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index
                         return (
                             <div key={index} className={`group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950 transition duration-300 ${isOtherHovered ? 'opacity-30' : 'opacity-100'}`} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
-                                <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale transition duration-300 group-hover:grayscale-0" />
+                                <Image src={member.image} alt={member.name} width={400} height={400} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale transition duration-300 group-hover:grayscale-0" />
                                 <div className="text-white font-semibold text-lg text-center mb-2">{member.name}</div>
                                 <div className="text-neutral-400 text-sm text-center">{member.role}</div>
                             </div>
