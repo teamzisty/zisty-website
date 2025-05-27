@@ -3,7 +3,6 @@ const nextConfig = {
   image: {
     unnpimized: true,
   },
-  output: "export",
 }
 
 module.exports = nextConfig
