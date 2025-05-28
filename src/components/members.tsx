@@ -1,11 +1,7 @@
-"use client";
-
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import { useState } from "react";
 
 export default function Members() {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-
     const members = [
         {
             name: "Rion",
@@ -73,12 +69,11 @@ export default function Members() {
                 </div>
             </Marquee>
             <div className="relative w-full overflow-hidden flex justify-center border-t border-b border-neutral-950">
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 py-8">
                     {members.map((member, index) => {
-                        const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index
                         return (
-                            <div key={index} className={`group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950 transition duration-300 ${isOtherHovered ? 'opacity-30' : 'opacity-100'}`} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
-                                <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale transition duration-300 group-hover:grayscale-0" />
+                            <div key={index} className="group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950">
+                                <Image width={400} height={400} src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale transition duration-300 group-hover:grayscale-0" />
                                 <div className="text-white font-semibold text-lg text-center mb-2">{member.name}</div>
                                 <div className="text-neutral-400 text-sm text-center">{member.role}</div>
                             </div>
@@ -86,8 +81,8 @@ export default function Members() {
                     })}
 
                     {/* fill in the blanks */}
-                    <div className="group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950"></div>
-                    <div className="group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950"></div>
+                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
+                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
                 </div>
             </div>
             <Marquee gradient={false} speed={50} loop={0}>
