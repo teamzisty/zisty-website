@@ -39,6 +39,11 @@ export default function Members() {
             image: "https://pbs.twimg.com/profile_images/1915770562779209728/yZyDjjpC_400x400.jpg",
         },
         {
+            name: "Sigma",
+            role: "Developer",
+            image: "https://9z5q.github.io/lovelang.png",
+        },
+        {
             name: "umaidango",
             role: "Developer",
             image: "https://pbs.twimg.com/profile_images/1873678657379774464/_IXeWAJ0_400x400.jpg",
@@ -68,12 +73,12 @@ export default function Members() {
                     <span className="text-4xl py-7 px-12 text-white/10 font-bold tracking-tight">Members</span>
                 </div>
             </Marquee>
-            <div className="relative w-full overflow-hidden flex justify-center border-t border-b border-neutral-950">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 py-8">
+            <div className="members-grid relative w-full overflow-hidden flex justify-center border-t border-b border-neutral-950">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     {members.map((member, index) => {
                         return (
-                            <div key={index} className="group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950">
-                                <Image width={400} height={400} src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale transition duration-300 group-hover:grayscale-0" />
+                            <div key={index} className="member-card group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950">
+                                <Image width={400} height={400} src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale" />
                                 <div className="text-white font-semibold text-lg text-center mb-2">{member.name}</div>
                                 <div className="text-neutral-400 text-sm text-center">{member.role}</div>
                             </div>
@@ -81,7 +86,6 @@ export default function Members() {
                     })}
 
                     {/* fill in the blanks */}
-                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
                     <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
                 </div>
             </div>
