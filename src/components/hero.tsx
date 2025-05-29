@@ -58,7 +58,7 @@ export default function Hero() {
                                 <MultiCursor cursors={[{ id: 10, name: "rai", color: "202, 138, 4 ", side: "right" }]} />
                             </div>
                             <div className="absolute top-[450px] left-[-60px]">
-                                <MultiCursor cursors={[{ id: 12, name: "rai", color: "8, 145, 178 ", side: "right" }]} />
+                                <MultiCursor cursors={[{ id: 12, name: "Sigma", color: "8, 145, 178 ", side: "right" }]} />
                             </div>
                         </div>
                     </div>
