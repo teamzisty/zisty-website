@@ -24,9 +24,9 @@ export default function Members() {
             image: "https://cdn.discordapp.com/avatars/1004348660181630977/6445e3f6eddfbad4b0130e9680552673.webp?size=1024",
         },
         {
-            name: "Webfullsympathy",
+            name: "Sigma",
             role: "Developer",
-            image: "https://pbs.twimg.com/profile_images/1860597396885110784/3gyUduSE_400x400.jpg",
+            image: "https://9z5q.github.io/lovelang.png",
         },
         {
             name: "tom",
@@ -37,11 +37,6 @@ export default function Members() {
             name: "rai",
             role: "Developer",
             image: "https://pbs.twimg.com/profile_images/1915770562779209728/yZyDjjpC_400x400.jpg",
-        },
-        {
-            name: "Sigma",
-            role: "Developer",
-            image: "https://9z5q.github.io/lovelang.png",
         },
         {
             name: "umaidango",

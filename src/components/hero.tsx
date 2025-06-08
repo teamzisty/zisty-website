@@ -28,7 +28,7 @@ export default function Hero() {
                                 <MultiCursor cursors={[{ id: 3, name: "tanahiro2010", color: "22, 163, 74 ", side: "left" }]} />
                             </div>
                             <div className="absolute top-[180px] right-4">
-                                <MultiCursor cursors={[{ id: 5, name: "Webfullsympathy", color: "8, 145, 178 ", side: "left" }]} />
+                                <MultiCursor cursors={[{ id: 5, name: "Sigma", color: "8, 145, 178 ", side: "left" }]} />
                             </div>
                             <div className="absolute top-[260px] right-[10px]">
                                 <MultiCursor cursors={[{ id: 7, name: "doracord", color: "147, 51, 234 ", side: "left" }]} />
@@ -56,9 +56,6 @@ export default function Hero() {
                             </div>
                             <div className="absolute top-[380px] left-[-40px]">
                                 <MultiCursor cursors={[{ id: 10, name: "rai", color: "202, 138, 4 ", side: "right" }]} />
-                            </div>
-                            <div className="absolute top-[450px] left-[-60px]">
-                                <MultiCursor cursors={[{ id: 12, name: "Sigma", color: "8, 145, 178 ", side: "right" }]} />
                             </div>
                         </div>
                     </div>
