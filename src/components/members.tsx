@@ -82,6 +82,7 @@ export default function Members() {
 
                     {/* fill in the blanks */}
                     <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
+                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
                 </div>
             </div>
             <Marquee gradient={false} speed={50} loop={0}>
