@@ -44,9 +44,9 @@ export default function Members() {
             image: "https://pbs.twimg.com/profile_images/1873678657379774464/_IXeWAJ0_400x400.jpg",
         },
         {
-            name: "doracord",
+            name: "Yunai",
             role: "Developer",
-            image: "https://pbs.twimg.com/profile_images/1921911571833360384/A5YMnSED_400x400.jpg",
+            image: "https://cdn.discordapp.com/avatars/1381227903508811848/0cb68ff304e2db706f4bb98a60b9a64a.webp?size=512",
         },
         {
             name: "takoyaki",
