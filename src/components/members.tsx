@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { Marquee } from "@/components/magicui/marquee";
 
 export default function Members() {
     const members = [
@@ -57,7 +57,7 @@ export default function Members() {
 
     return (
         <section className="relative w-full overflow-hidden flex flex-col justify-center border-t border-b border-neutral-950">
-            <Marquee gradient={false} speed={50} loop={0}>
+            <Marquee className="[--duration:20s]">
                 <div className="flex whitespace-nowrap">
                     <span className="text-4xl py-7 px-12 text-white/10 font-bold tracking-tight">Members</span>
                     <span className="text-4xl py-7 px-12 text-white/10 font-bold tracking-tight">Members</span>
@@ -69,10 +69,10 @@ export default function Members() {
                 </div>
             </Marquee>
             <div className="members-grid relative w-full overflow-hidden flex justify-center border-t border-b border-neutral-950">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <div className="max-w-255 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     {members.map((member, index) => {
                         return (
-                            <div key={index} className="member-card group relative shadow-xl backdrop-blur-lg p-15 w-80 flex flex-col items-center border border-neutral-950">
+                            <div key={index} className="member-card group relative shadow-xl backdrop-blur-lg p-15 w-85 flex flex-col items-center border border-neutral-950">
                                 <Image width={400} height={400} src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover shadow-lg mb-6 filter grayscale" />
                                 <div className="text-white font-semibold text-lg text-center mb-2">{member.name}</div>
                                 <div className="text-neutral-400 text-sm text-center">{member.role}</div>
@@ -81,11 +81,11 @@ export default function Members() {
                     })}
 
                     {/* fill in the blanks */}
-                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
-                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-80 flex-col items-center border border-neutral-950"></div>
+                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-85 flex-col items-center border border-neutral-950"></div>
+                    <div className="hidden md:flex group relative shadow-xl backdrop-blur-lg p-15 w-85 flex-col items-center border border-neutral-950"></div>
                 </div>
             </div>
-            <Marquee gradient={false} speed={50} loop={0}>
+            <Marquee reverse className="[--duration:20s]">
                 <div className="flex whitespace-nowrap">
                     <span className="text-4xl py-7 px-12 text-white/10 font-bold tracking-tight">Members</span>
                     <span className="text-4xl py-7 px-12 text-white/10 font-bold tracking-tight">Members</span>
