@@ -6,12 +6,12 @@ export default function Members() {
         {
             name: "Rion",
             role: "Founder, Developer",
-            image: "https://pbs.twimg.com/profile_images/1914457806679498756/gi2pV6jy_400x400.jpg",
+            image: "https://github.com/ri0n-dev.png",
         },
         {
             name: "tanahiro2010",
             role: "Staff, Developer",
-            image: "https://pbs.twimg.com/profile_images/1879463762627072000/WnD4sJ1V_400x400.jpg",
+            image: "https://github.com/tanahiro2010.png",
         },
         {
             name: "Syobosyobon",
