@@ -16,7 +16,7 @@ export default function Footer() {
               "invert(90%) sepia(4%) saturate(0%) hue-rotate(187deg) brightness(90%) contrast(86%)",
           }}
         />
-        <div className="flex items-center space-x-4 text-neutral-400 px-4 py-6 md:p-10">
+        <div className="flex items-center space-x-4 text-muted-foreground px-4 py-6 md:p-10">
           <a
             href="https://discord.gg/teamzisty"
             className="text-[15px] flex items-center space-x-1 hover:text-neutral-300 duration-200 ease-in-out"

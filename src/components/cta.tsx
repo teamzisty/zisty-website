@@ -5,46 +5,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import MultiCursor from "./ui/multiCursor";
-
-const names = [
-  "James",
-  "William",
-  "Guarav",
-  "Rauno",
-  "Marilyn",
-  "Cecilio",
-  "Timo",
-  "Josh",
-  "Chloe",
-  "Henry",
-  "Manuel",
-  "Skully",
-  "Pranathi",
-  "Evil Rabbit",
-  "Zahra",
-  "Yavor",
-  "Christopher",
-  "Paul",
-  "Logan",
-  "Severin",
-  "Maggie",
-  "Justin",
-  "Mitul",
-  "Fio",
-  "Daniel",
-];
-
-const colors = [
-  "bg-red-500",
-  "bg-blue-500",
-  "bg-green-500",
-  "bg-yellow-500",
-  "bg-purple-500",
-  "bg-pink-500",
-  "bg-indigo-500",
-  "bg-teal-500",
-];
-
 const CircularNames = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center gap-200 hide-cursor">
@@ -155,7 +115,7 @@ export default function Cta() {
       <CircularNames />
       <div className="container mx-auto px-4">
         <div className="relative flex flex-col items-center text-center z-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter mb-2">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-2">
             Want to{" "}
             <span className="relative inline-block">
               <span className="border-b-4 border-yellow-400 px-1 pb-1">
@@ -201,8 +161,9 @@ export default function Cta() {
             </span>{" "}
             us?
           </h2>
-          <p className="mt-4 text-lg text-neutral-400 max-w-2xl mx-auto">
-            Make unreal to real with us. Please join our discord server.
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            By joining Zisty Hub, you can engage in various interactions such as
+            development updates and VC sessions. Please feel free to join us.
           </p>
           <Button variant="outline" size="lg" className="mt-8" asChild>
             <Link href="https://discord.gg/teamzisty">

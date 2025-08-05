@@ -10,7 +10,7 @@ export default function Hero() {
       className="w-full min-h-screen flex flex-col items-center justify-center"
     >
       <div className="z-10 flex flex-col items-center text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
           Build the
           <span className="relative inline-block text-yellow-400 mx-4">
             Amazing

@@ -76,30 +76,30 @@ export default function Header() {
         <nav className="flex justify-center gap-2">
           <Link href="#home">
             <button className={cn(
-                "px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
                 activeSection === "home"
                     ? "bg-white text-black"
-                    : "text-neutral-400 hover:text-white"
+                    : "text-muted-foreground hover:text-white"
             )}>
               Home
             </button>
           </Link>
           <Link href="#people">
             <button className={cn(
-                "px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
                 activeSection === "people"
                     ? "bg-white text-black"
-                    : "text-neutral-400 hover:text-white"
+                    : "text-muted-foreground hover:text-white"
             )}>
               People
             </button>
           </Link>
           <Link href="#join-us">
             <button className={cn(
-                "px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
                 activeSection === "join-us"
                     ? "bg-white text-black"
-                    : "text-neutral-400 hover:text-white"
+                    : "text-muted-foreground hover:text-white"
             )}>
               Join us
             </button>
