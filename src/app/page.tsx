@@ -1,13 +1,15 @@
 import Hero from "@/components/hero";
 import Members from "@/components/members";
-import Discord from "@/components/discord";
+import Cta from "@/components/cta";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col items-center">
       <Hero />
-      <Members />
-      <Discord />
+      <div className="flex flex-col items-center w-full px-42">
+        <Members />
+        <Cta />
+      </div>
     </main>
   );
 }
