@@ -72,8 +72,8 @@ const members = [
 ];
 
 const MemberCard = ({ member }: { member: (typeof members)[0] }) => {
-  return member.link ? (
-    <Link href={member.link} target="_blank" className="group">
+  return (
+    <Link href={member.link ?? "#"} target="_blank" className="group">
       <div className="group relative rounded-xl overflow-hidden transition-all duration-500 ease-in-out">
         {/* Blurred background image covering the card */}
         <div className="absolute inset-0 z-0">
@@ -98,11 +98,11 @@ const MemberCard = ({ member }: { member: (typeof members)[0] }) => {
               sizes="(max-width: 768px) 100vw, 260px"
               draggable={false}
               className="
-    rounded-2xl object-cover w-full h-full
-    filter grayscale brightness-75
-    transition-all duration-500 ease-in-out
-    group-hover:grayscale-0 group-hover:brightness-100
-  "
+      rounded-2xl object-cover w-full h-full
+      filter grayscale brightness-75
+      transition-all duration-500 ease-in-out
+      group-hover:grayscale-0 group-hover:brightness-100
+    "
             />
           </div>
         </div>
@@ -117,49 +117,6 @@ const MemberCard = ({ member }: { member: (typeof members)[0] }) => {
         </div>
       </div>
     </Link>
-  ) : (
-    <div className="group relative rounded-xl overflow-hidden transition-all duration-500 ease-in-out">
-      {/* Blurred background image covering the card */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={member.image}
-          alt={member.name}
-          fill
-          className="object-cover w-full h-full filter blur-2xl scale-110 brightness-25 transition duration-500 grayscale group-hover:grayscale-0 group-hover:brightness-50 ease-in-out"
-          sizes="(max-width: 768px) 100vw, 260px"
-          draggable={false}
-        />
-        {/* Optional: dark overlay for better contrast */}
-        <div className="absolute inset-0 bg-black/30 z-1" />
-      </div>
-      {/* Profile Image */}
-      <div className="relative z-10 m-4 flex items-center justify-center aspect-square w-[calc(100%-2rem)]">
-        <div className="relative w-full h-full">
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            sizes="(max-width: 768px) 100vw, 260px"
-            draggable={false}
-            className="
-  rounded-2xl object-cover w-full h-full
-  filter grayscale brightness-75
-  transition-all duration-500 ease-in-out
-  group-hover:grayscale-0 group-hover:brightness-100
-"
-          />
-        </div>
-      </div>
-
-      {/* Footer info */}
-      <div className="relative z-10 w-full px-4 pb-3 flex flex-col items-start gap-1">
-        <div className="flex justify-between w-full items-center gap-2">
-          <p className="font-semibold flex-1 truncate">{member.name}</p>
-          <p className="text-sm text-gray-500 truncate">@{member.username}</p>
-        </div>
-        <p className="text-sm text-gray-400 truncate w-full">{member.role}</p>
-      </div>
-    </div>
   );
 };
 
