@@ -140,7 +140,9 @@ export default function Members() {
           <div
             className="pointer-events-none absolute inset-0"
             style={{
-              background: `radial-gradient(circle at ${mousePos.x} ${mousePos.y}, rgba(255,255,255,0.1), transparent 30%)`,
+              background: isMouseInside 
+                ? `radial-gradient(circle at ${mousePos.x} ${mousePos.y}, rgba(255,255,255,0.1), transparent 30%)`
+                : 'transparent',
             }}
           />
         </div>

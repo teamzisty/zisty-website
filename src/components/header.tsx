@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
-  const sectionIds = ["home", "people", "join-us"];
+  const sectionIds = useMemo(() => ["home", "people", "join-us"], []);
 
   useEffect(() => {
     let observer: IntersectionObserver;
