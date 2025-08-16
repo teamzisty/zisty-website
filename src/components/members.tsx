@@ -11,25 +11,31 @@ const members = [
   },
   {
     name: "tanahiro2010",
-    role: "Staff, Developer",
+    role: "Mod, Developer",
     image: "https://github.com/tanahiro2010.png",
   },
   {
     name: "Syobosyobon",
-    role: "Staff, Developer",
+    role: "Mod, Developer",
     image:
       "https://pbs.twimg.com/profile_images/1772492028636737536/bClftlxv_400x400.jpg",
   },
   {
     name: "kazu",
-    role: "Staff, Developer",
+    role: "Mod, Developer",
     image:
       "https://cdn.discordapp.com/avatars/1004348660181630977/6445e3f6eddfbad4b0130e9680552673.webp?size=1024",
   },
   {
+    name: "rai",
+    role: "Mod, Developer",
+    image:
+      "https://pbs.twimg.com/profile_images/1915770562779209728/yZyDjjpC_400x400.jpg",
+  },
+  {
     name: "Sigma",
     role: "Developer",
-    image: "https://519m4.github.io/lovelang.png",
+    image: "https://cdn.discordapp.com/avatars/809373892183195668/b8bdc8737e0dff4fc3282d0358e44168.webp?size=1024g",
   },
   {
     name: "tom",
@@ -38,28 +44,16 @@ const members = [
       "https://pbs.twimg.com/profile_images/1863135999087505408/5qjunahh_400x400.jpg",
   },
   {
-    name: "rai",
+    name: "hypi",
     role: "Developer",
     image:
-      "https://pbs.twimg.com/profile_images/1915770562779209728/yZyDjjpC_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1908406182680907776/SNjY1S66_400x400.jpg",
   },
   {
-    name: "umaidango",
+    name: "age_water",
     role: "Developer",
     image:
-      "https://pbs.twimg.com/profile_images/1873678657379774464/_IXeWAJ0_400x400.jpg",
-  },
-  {
-    name: "Yunai",
-    role: "Developer",
-    image:
-      "https://cdn.discordapp.com/avatars/1381227903508811848/0cb68ff304e2db706f4bb98a60b9a64a.webp?size=512",
-  },
-  {
-    name: "takoyaki",
-    role: "Developer",
-    image:
-      "https://pbs.twimg.com/profile_images/1773615356420239360/UglquU_j_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1436185055584350227/LiN0mIi__400x400.png",
   },
 ];
 
@@ -112,19 +106,9 @@ const MemberCard = ({ member }: { member: (typeof members)[0] }) => {
 
 export default function Members() {
   const [mousePos, setMousePos] = useState({ x: "50%", y: "50%" });
+  const [isMouseInside, setIsMouseInside] = useState(false);
   return (
-    <section id="people" className="py-20 w-full">
-      <div className="w-full mx-auto px-4">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter text-foreground/80">
-            We are <span className="text-yellow-400">Japanese</span> <br />
-            We are <span className="text-yellow-400">students.</span>
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We are a community team of mainly Japanese students who love
-            programming.
-          </p>
-        </div>
+    <section id="people" className="py-10 w-full">
         <div
           className="relative mt-12 pb-16"
           onMouseMove={(e) => {
@@ -141,9 +125,11 @@ export default function Members() {
             if (x > rect.width) x = rect.width;
 
             setMousePos({ x: `${x}px`, y: `${y}px` });
+            setIsMouseInside(true);
           }}
           onMouseLeave={() => {
             setMousePos({ x: "50%", y: "50%" });
+            setIsMouseInside(false);
           }}
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -158,7 +144,6 @@ export default function Members() {
             }}
           />
         </div>
-      </div>
     </section>
   );
 }

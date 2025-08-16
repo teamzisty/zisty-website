@@ -5,9 +5,10 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import MultiCursor from "./ui/multiCursor";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 const CircularNames = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center gap-200 hide-cursor">
+    <div className="hidden xl:flex absolute top-0 left-0 w-full h-full justify-center items-center gap-200 hide-cursor">
       <div className="relative w-[200px] h-[500px]">
         <div className="absolute top-0 right-0">
           <MultiCursor
@@ -28,31 +29,24 @@ const CircularNames = () => {
             ]}
           />
         </div>
-        <div className="absolute top-[180px] right-4">
+        <div className="absolute top-[190px] right-4">
           <MultiCursor
             cursors={[
               { id: 5, name: "Sigma", color: "8, 145, 178 ", side: "left" },
             ]}
           />
         </div>
-        <div className="absolute top-[260px] right-[10px]">
+        <div className="absolute top-[290px] right-[10px]">
           <MultiCursor
             cursors={[
-              { id: 7, name: "Yunai", color: "147, 51, 234 ", side: "left" },
+              { id: 7, name: "age_water", color: "147, 51, 234 ", side: "left" },
             ]}
           />
         </div>
-        <div className="absolute top-[340px] right-[0px]">
+        <div className="absolute top-[380px] right-[-20px]">
           <MultiCursor
             cursors={[
               { id: 9, name: "h_ypi", color: "202, 138, 4 ", side: "left" },
-            ]}
-          />
-        </div>
-        <div className="absolute top-[420px] right-[-30px]">
-          <MultiCursor
-            cursors={[
-              { id: 11, name: "tom", color: "22, 163, 74 ", side: "left" },
             ]}
           />
         </div>
@@ -93,7 +87,7 @@ const CircularNames = () => {
         <div className="absolute top-[290px] left-[-10px]">
           <MultiCursor
             cursors={[
-              { id: 8, name: "takoyaki", color: "22, 163, 74 ", side: "right" },
+              { id: 8, name: "tom", color: "22, 163, 74 ", side: "right" },
             ]}
           />
         </div>
@@ -111,8 +105,9 @@ const CircularNames = () => {
 
 export default function Cta() {
   return (
-    <section id="join-us" className="py-80 w-full relative overflow-hidden">
+    <section id="join-us" className="py-30 lg:py-80 w-full relative overflow-hidden">
       <CircularNames />
+      <FlickeringGrid className="absolute inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]" squareSize={4} gridGap={6} color="#2f2709" maxOpacity={1}/>
       <div className="container mx-auto px-4">
         <div className="relative flex flex-col items-center text-center z-10">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-2">
@@ -165,7 +160,7 @@ export default function Cta() {
             By joining Zisty Hub, you can engage in various interactions such as
             development updates and VC sessions. Please feel free to join us.
           </p>
-          <Button variant="outline" size="lg" className="mt-8" asChild>
+          <Button size="lg" className="mt-9" asChild>
             <Link href="https://discord.gg/teamzisty">
               Join Discord <ArrowUpRight size={18} />
             </Link>

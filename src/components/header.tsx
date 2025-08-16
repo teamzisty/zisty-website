@@ -6,14 +6,15 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const sectionIds = ["home", "people", "join-us"];
 
   useEffect(() => {
     let observer: IntersectionObserver;
 
     const setupObserver = () => {
-      const elements = sectionIds.map(id => document.getElementById(id)).filter(el => el !== null) as HTMLElement[];
+      const elements = sectionIds
+        .map(id => document.getElementById(id))
+        .filter(el => el !== null) as HTMLElement[];
 
       if (elements.length !== sectionIds.length) {
         return false;
@@ -43,26 +44,21 @@ export default function Header() {
       attempts++;
       if (attempts < 10) setTimeout(trySetup, 100);
     };
-    
     trySetup();
 
+    // Home Active Section Detection
     const handleScroll = () => {
-        // Show header when scrolled more than 90% of the viewport height
-        if (window.scrollY > window.innerHeight * 0.9) {
-            setIsHeaderVisible(true);
-        } else {
-            setIsHeaderVisible(false);
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+      if (window.scrollY === 0) {
+        setActiveSection("home");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       if (observer) observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [sectionIds]);
 
   return (
     <header
@@ -76,32 +72,32 @@ export default function Header() {
         <nav className="flex justify-center gap-2">
           <Link href="#home">
             <button className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
-                activeSection === "home"
-                    ? "bg-white text-black"
-                    : "text-muted-foreground hover:text-white"
+              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+              activeSection === "home"
+                ? "bg-white text-black"
+                : "text-muted-foreground hover:text-white"
             )}>
               Home
             </button>
           </Link>
           <Link href="#people">
             <button className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
-                activeSection === "people"
-                    ? "bg-white text-black"
-                    : "text-muted-foreground hover:text-white"
+              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+              activeSection === "people"
+                ? "bg-white text-black"
+                : "text-muted-foreground hover:text-white"
             )}>
               People
             </button>
           </Link>
           <Link href="#join-us">
             <button className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
-                activeSection === "join-us"
-                    ? "bg-white text-black"
-                    : "text-muted-foreground hover:text-white"
+              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+              activeSection === "join-us"
+                ? "bg-white text-black"
+                : "text-muted-foreground hover:text-white"
             )}>
-              Join us
+              Join
             </button>
           </Link>
         </nav>
