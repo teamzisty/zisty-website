@@ -107,7 +107,7 @@ export default function Cta() {
   return (
     <section id="join-us" className="py-30 lg:py-80 w-full relative overflow-hidden">
       <CircularNames />
-      <FlickeringGrid className="absolute inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]" squareSize={4} gridGap={6} color="#2f2709" maxOpacity={1}/>
+      <FlickeringGrid className="absolute inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]" squareSize={4} gridGap={6} color="#2f2709" maxOpacity={1} />
       <div className="container mx-auto px-4">
         <div className="relative flex flex-col items-center text-center z-10">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-2">
@@ -156,15 +156,25 @@ export default function Cta() {
             </span>{" "}
             us?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
             By joining Zisty Hub, you can engage in various interactions such as
             development updates and VC sessions. Please feel free to join us.
           </p>
-          <Button size="lg" className="mt-9" asChild>
-            <Link href="https://discord.gg/teamzisty">
-              Join Discord <ArrowUpRight size={18} />
-            </Link>
-          </Button>
+
+          <div className="flex lg:hidden">
+            <Button className="mt-9" asChild>
+              <Link href="https://discord.gg/teamzisty">
+                Join Discord <ArrowUpRight size={18} />
+              </Link>
+            </Button>
+          </div>
+          <div className="hidden lg:flex">
+            <Button size="lg" className="mt-9" asChild>
+              <Link href="https://discord.gg/teamzisty">
+                Join Discord <ArrowUpRight size={18} />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

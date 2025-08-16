@@ -59,10 +59,7 @@ const members = [
 
 const MemberCard = ({ member }: { member: (typeof members)[0] }) => {
   return (
-    <div
-      className="group relative rounded-xl overflow-hidden transition-all duration-500 ease-in-out"
-      style={{ minHeight: 340 }}
-    >
+    <div className="group relative rounded-xl overflow-hidden transition-all duration-500 ease-in-out">
       {/* Blurred background image covering the card */}
       <div className="absolute inset-0 z-0">
         <Image
