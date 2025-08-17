@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
