@@ -62,6 +62,13 @@ const members = [
     link: "https://x.com/hypinohaizin",
   },
   {
+    name: "Maguro",
+    username: "MagUx_xU",
+    role: "Developer",
+    image: "https://pbs.twimg.com/profile_images/1878130658876493824/WN_EBm5N_400x400.jpg",
+    link: "https://x.com/MagUx_xU",
+  },
+  {
     name: "age_water",
     username: "age_water",
     role: "Developer",

@@ -77,7 +77,7 @@ const CircularNames = () => {
             cursors={[
               {
                 id: 6,
-                name: "umaidango",
+                name: "Maguro",
                 color: "147, 51, 234 ",
                 side: "right",
               },
