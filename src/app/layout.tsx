@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next"
 import Header from "@/components/header";
 import Footer from "@/components/layout/footer";
+import { BlurFade } from "@/components/magicui/blur-fade";
 import "./globals.css";
 
 import { Inter } from "next/font/google";
@@ -46,9 +47,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <BlurFade>
+          <Header />
+          {children}
+          <Footer />
+        </BlurFade>
 
         {/* Vercel Analytics */}
         <Analytics />
