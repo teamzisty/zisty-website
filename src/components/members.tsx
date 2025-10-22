@@ -27,13 +27,6 @@ const members = [
     link: "https://x.com/Syobosyobonn2",
   },
   {
-    name: "kazu",
-    username: "kz0d",
-    role: "Mod, Developer",
-    image:
-      "https://cdn.discordapp.com/avatars/1004348660181630977/6445e3f6eddfbad4b0130e9680552673.webp?size=1024",
-  },
-  {
     name: "rai",
     username: "raic_dev",
     role: "Mod, Developer",
@@ -45,7 +38,7 @@ const members = [
     username: "0x8h",
     role: "Developer",
     image: "https://cdn.discordapp.com/avatars/809373892183195668/b8bdc8737e0dff4fc3282d0358e44168.webp?size=1024g",
-    link: "https://discord.com/users/809373892183195668",
+    link: "https://discord.com/users/1324548135443370095",
   },
   {
     name: "tom",
@@ -53,13 +46,6 @@ const members = [
     role: "Developer",
     image: "https://pbs.twimg.com/profile_images/1863135999087505408/5qjunahh_400x400.jpg",
     link: "https://x.com/xxtomm",
-  },
-  {
-    name: "hypi",
-    username: "hypinohaizin",
-    role: "Developer",
-    image: "https://pbs.twimg.com/profile_images/1908406182680907776/SNjY1S66_400x400.jpg",
-    link: "https://x.com/hypinohaizin",
   },
   {
     name: "Maguro",
