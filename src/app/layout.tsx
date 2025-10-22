@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/next"
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import "./globals.css";
